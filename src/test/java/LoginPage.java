@@ -28,6 +28,7 @@ public class LoginPage {
         btnLogin.click();
 
     }
+
     public void doLogout(){
         btnSetting.click();
         dropdownmenu.get(2).click();

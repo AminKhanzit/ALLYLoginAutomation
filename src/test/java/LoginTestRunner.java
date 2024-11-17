@@ -27,6 +27,14 @@ public class LoginTestRunner extends Setup {
         loginPage.doLogin("wrongUsername", "wrongPassword");
         Assert.assertTrue(loginPage.btnLogin.isDisplayed());
     }
+    @Test(priority = 4)
+    public void doLoginWithNull(){
+
+        loginPage = new LoginPage(driver);
+
+        loginPage.doLogin("", "");
+        Assert.assertTrue(loginPage.btnLogin.isDisplayed());
+    }
     @Test(priority = 3)
     public void doLoginWithNullCreds(){
 
